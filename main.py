@@ -12,7 +12,7 @@ if __name__ == "__main__":
     while True:
         user_input = input("あなた: ")
         if user_input == "": continue
-        if user_input == "ありがとう": break
+        if user_input == "さようなら": break
 
         output(Ai.nanako_answer(user_input))
 
