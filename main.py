@@ -16,4 +16,4 @@ if __name__ == "__main__":
 
         output(Ai.nanako_answer(user_input))
 
-    output("こちらこそありがとう☆　またお話しようね♪")
+    output("ありがとう☆　またお話しようね♪")
