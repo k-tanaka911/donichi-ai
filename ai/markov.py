@@ -13,18 +13,16 @@ class Markov:
     def answer(self, user_morphemes):
         sentence = ""
 
-        count = 0
         w1 = ''
         w2 = ''
-        while True:
-            count += 1
-            keys = random.choice(list(self.table.keys()))
-            if keys[0] in user_morphemes:
-                w1 = keys[0]
-                w2 = keys[1]
+        keys = list(self.table.keys())
+        random.shuffle(keys)
+
+        for key in keys:
+            if key[0] in user_morphemes:
+                w1 = key[0]
+                w2 = key[1]
                 break
-            if count > len(self.table):
-                return ""
 
         sentence = w1 + w2
         count = 0
